@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		67E79C111566DD6B0080A441 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E79C101566DD6B0080A441 /* UIKit.framework */; };
+		67E79C131566DD6B0080A441 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E79C121566DD6B0080A441 /* Foundation.framework */; };
+		67E79C151566DD6B0080A441 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E79C141566DD6B0080A441 /* CoreGraphics.framework */; };
+		67E79C1B1566DD6B0080A441 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67E79C191566DD6B0080A441 /* InfoPlist.strings */; };
+		67E79C1D1566DD6B0080A441 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E79C1C1566DD6B0080A441 /* main.m */; };
+		67E79C211566DD6B0080A441 /* SMSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E79C201566DD6B0080A441 /* SMSAppDelegate.m */; };
+		67E79C241566DD6B0080A441 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67E79C221566DD6B0080A441 /* MainStoryboard_iPhone.storyboard */; };
+		67E79C271566DD6B0080A441 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67E79C251566DD6B0080A441 /* MainStoryboard_iPad.storyboard */; };
+		67E79C2A1566DD6B0080A441 /* SMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E79C291566DD6B0080A441 /* SMSViewController.m */; };
+		67E79C321566DD6C0080A441 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E79C311566DD6C0080A441 /* SenTestingKit.framework */; };
+		67E79C331566DD6C0080A441 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E79C101566DD6B0080A441 /* UIKit.framework */; };
+		67E79C341566DD6C0080A441 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E79C121566DD6B0080A441 /* Foundation.framework */; };
+		67E79C3C1566DD6C0080A441 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67E79C3A1566DD6C0080A441 /* InfoPlist.strings */; };
+		67E79C3F1566DD6C0080A441 /* SMToolsSampleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E79C3E1566DD6C0080A441 /* SMToolsSampleAppTests.m */; };
+		67EF07E11566E7F1001DA965 /* libSMTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67EF07DC1566E7D7001DA965 /* libSMTools.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		67E79C351566DD6C0080A441 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67E79C031566DD6B0080A441 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67E79C0B1566DD6B0080A441;
+			remoteInfo = SMToolsSampleApp;
+		};
+		67EF07DB1566E7D7001DA965 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67EF07D31566E7D7001DA965 /* SMTools.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 67F023A41566D86F00B14C9F;
+			remoteInfo = SMTools;
+		};
+		67EF07DD1566E7D7001DA965 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67EF07D31566E7D7001DA965 /* SMTools.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 67F023B41566D86F00B14C9F;
+			remoteInfo = SMToolsTests;
+		};
+		67EF07DF1566E7ED001DA965 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67EF07D31566E7D7001DA965 /* SMTools.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 67F023A31566D86F00B14C9F;
+			remoteInfo = SMTools;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		67E79C0C1566DD6B0080A441 /* SMToolsSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMToolsSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		67E79C101566DD6B0080A441 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		67E79C121566DD6B0080A441 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		67E79C141566DD6B0080A441 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		67E79C181566DD6B0080A441 /* SMToolsSampleApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SMToolsSampleApp-Info.plist"; sourceTree = "<group>"; };
+		67E79C1A1566DD6B0080A441 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		67E79C1C1566DD6B0080A441 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		67E79C1E1566DD6B0080A441 /* SMToolsSampleApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SMToolsSampleApp-Prefix.pch"; sourceTree = "<group>"; };
+		67E79C1F1566DD6B0080A441 /* SMSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSAppDelegate.h; sourceTree = "<group>"; };
+		67E79C201566DD6B0080A441 /* SMSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSAppDelegate.m; sourceTree = "<group>"; };
+		67E79C231566DD6B0080A441 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		67E79C261566DD6B0080A441 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		67E79C281566DD6B0080A441 /* SMSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSViewController.h; sourceTree = "<group>"; };
+		67E79C291566DD6B0080A441 /* SMSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSViewController.m; sourceTree = "<group>"; };
+		67E79C301566DD6C0080A441 /* SMToolsSampleAppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMToolsSampleAppTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67E79C311566DD6C0080A441 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		67E79C391566DD6C0080A441 /* SMToolsSampleAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SMToolsSampleAppTests-Info.plist"; sourceTree = "<group>"; };
+		67E79C3B1566DD6C0080A441 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		67E79C3D1566DD6C0080A441 /* SMToolsSampleAppTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMToolsSampleAppTests.h; sourceTree = "<group>"; };
+		67E79C3E1566DD6C0080A441 /* SMToolsSampleAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMToolsSampleAppTests.m; sourceTree = "<group>"; };
+		67EF07D31566E7D7001DA965 /* SMTools.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SMTools.xcodeproj; path = ../../../src/SMTools/SMTools.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		67E79C091566DD6B0080A441 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67EF07E11566E7F1001DA965 /* libSMTools.a in Frameworks */,
+				67E79C111566DD6B0080A441 /* UIKit.framework in Frameworks */,
+				67E79C131566DD6B0080A441 /* Foundation.framework in Frameworks */,
+				67E79C151566DD6B0080A441 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67E79C2C1566DD6C0080A441 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67E79C321566DD6C0080A441 /* SenTestingKit.framework in Frameworks */,
+				67E79C331566DD6C0080A441 /* UIKit.framework in Frameworks */,
+				67E79C341566DD6C0080A441 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		67E79C011566DD6B0080A441 = {
+			isa = PBXGroup;
+			children = (
+				67E79C161566DD6B0080A441 /* SMToolsSampleApp */,
+				67E79C371566DD6C0080A441 /* SMToolsSampleAppTests */,
+				67E79C0F1566DD6B0080A441 /* Frameworks */,
+				67E79C0D1566DD6B0080A441 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		67E79C0D1566DD6B0080A441 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67E79C0C1566DD6B0080A441 /* SMToolsSampleApp.app */,
+				67E79C301566DD6C0080A441 /* SMToolsSampleAppTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67E79C0F1566DD6B0080A441 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67E79C101566DD6B0080A441 /* UIKit.framework */,
+				67E79C121566DD6B0080A441 /* Foundation.framework */,
+				67E79C141566DD6B0080A441 /* CoreGraphics.framework */,
+				67E79C311566DD6C0080A441 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		67E79C161566DD6B0080A441 /* SMToolsSampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				67EF07D31566E7D7001DA965 /* SMTools.xcodeproj */,
+				67E79C1F1566DD6B0080A441 /* SMSAppDelegate.h */,
+				67E79C201566DD6B0080A441 /* SMSAppDelegate.m */,
+				67E79C221566DD6B0080A441 /* MainStoryboard_iPhone.storyboard */,
+				67E79C251566DD6B0080A441 /* MainStoryboard_iPad.storyboard */,
+				67E79C281566DD6B0080A441 /* SMSViewController.h */,
+				67E79C291566DD6B0080A441 /* SMSViewController.m */,
+				67E79C171566DD6B0080A441 /* Supporting Files */,
+			);
+			path = SMToolsSampleApp;
+			sourceTree = "<group>";
+		};
+		67E79C171566DD6B0080A441 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				67E79C181566DD6B0080A441 /* SMToolsSampleApp-Info.plist */,
+				67E79C191566DD6B0080A441 /* InfoPlist.strings */,
+				67E79C1C1566DD6B0080A441 /* main.m */,
+				67E79C1E1566DD6B0080A441 /* SMToolsSampleApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		67E79C371566DD6C0080A441 /* SMToolsSampleAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				67E79C3D1566DD6C0080A441 /* SMToolsSampleAppTests.h */,
+				67E79C3E1566DD6C0080A441 /* SMToolsSampleAppTests.m */,
+				67E79C381566DD6C0080A441 /* Supporting Files */,
+			);
+			path = SMToolsSampleAppTests;
+			sourceTree = "<group>";
+		};
+		67E79C381566DD6C0080A441 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				67E79C391566DD6C0080A441 /* SMToolsSampleAppTests-Info.plist */,
+				67E79C3A1566DD6C0080A441 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		67EF07D41566E7D7001DA965 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67EF07DC1566E7D7001DA965 /* libSMTools.a */,
+				67EF07DE1566E7D7001DA965 /* SMToolsTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		67E79C0B1566DD6B0080A441 /* SMToolsSampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67E79C421566DD6C0080A441 /* Build configuration list for PBXNativeTarget "SMToolsSampleApp" */;
+			buildPhases = (
+				67E79C081566DD6B0080A441 /* Sources */,
+				67E79C091566DD6B0080A441 /* Frameworks */,
+				67E79C0A1566DD6B0080A441 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67EF07E01566E7ED001DA965 /* PBXTargetDependency */,
+			);
+			name = SMToolsSampleApp;
+			productName = SMToolsSampleApp;
+			productReference = 67E79C0C1566DD6B0080A441 /* SMToolsSampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		67E79C2F1566DD6C0080A441 /* SMToolsSampleAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67E79C451566DD6C0080A441 /* Build configuration list for PBXNativeTarget "SMToolsSampleAppTests" */;
+			buildPhases = (
+				67E79C2B1566DD6C0080A441 /* Sources */,
+				67E79C2C1566DD6C0080A441 /* Frameworks */,
+				67E79C2D1566DD6C0080A441 /* Resources */,
+				67E79C2E1566DD6C0080A441 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67E79C361566DD6C0080A441 /* PBXTargetDependency */,
+			);
+			name = SMToolsSampleAppTests;
+			productName = SMToolsSampleAppTests;
+			productReference = 67E79C301566DD6C0080A441 /* SMToolsSampleAppTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		67E79C031566DD6B0080A441 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SMS;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "suleymanmelikoglu@gmail.com";
+			};
+			buildConfigurationList = 67E79C061566DD6B0080A441 /* Build configuration list for PBXProject "SMToolsSampleApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 67E79C011566DD6B0080A441;
+			productRefGroup = 67E79C0D1566DD6B0080A441 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 67EF07D41566E7D7001DA965 /* Products */;
+					ProjectRef = 67EF07D31566E7D7001DA965 /* SMTools.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				67E79C0B1566DD6B0080A441 /* SMToolsSampleApp */,
+				67E79C2F1566DD6C0080A441 /* SMToolsSampleAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		67EF07DC1566E7D7001DA965 /* libSMTools.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSMTools.a;
+			remoteRef = 67EF07DB1566E7D7001DA965 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		67EF07DE1566E7D7001DA965 /* SMToolsTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SMToolsTests.octest;
+			remoteRef = 67EF07DD1566E7D7001DA965 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		67E79C0A1566DD6B0080A441 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67E79C1B1566DD6B0080A441 /* InfoPlist.strings in Resources */,
+				67E79C241566DD6B0080A441 /* MainStoryboard_iPhone.storyboard in Resources */,
+				67E79C271566DD6B0080A441 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67E79C2D1566DD6C0080A441 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67E79C3C1566DD6C0080A441 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		67E79C2E1566DD6C0080A441 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67E79C081566DD6B0080A441 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67E79C1D1566DD6B0080A441 /* main.m in Sources */,
+				67E79C211566DD6B0080A441 /* SMSAppDelegate.m in Sources */,
+				67E79C2A1566DD6B0080A441 /* SMSViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67E79C2B1566DD6C0080A441 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67E79C3F1566DD6C0080A441 /* SMToolsSampleAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		67E79C361566DD6C0080A441 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67E79C0B1566DD6B0080A441 /* SMToolsSampleApp */;
+			targetProxy = 67E79C351566DD6C0080A441 /* PBXContainerItemProxy */;
+		};
+		67EF07E01566E7ED001DA965 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SMTools;
+			targetProxy = 67EF07DF1566E7ED001DA965 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		67E79C191566DD6B0080A441 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67E79C1A1566DD6B0080A441 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		67E79C221566DD6B0080A441 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67E79C231566DD6B0080A441 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		67E79C251566DD6B0080A441 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67E79C261566DD6B0080A441 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		67E79C3A1566DD6C0080A441 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67E79C3B1566DD6C0080A441 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		67E79C401566DD6C0080A441 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../../src/SMTools/SMTools/**";
+			};
+			name = Debug;
+		};
+		67E79C411566DD6C0080A441 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../../src/SMTools/SMTools/**";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		67E79C431566DD6C0080A441 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SMToolsSampleApp/SMToolsSampleApp-Prefix.pch";
+				INFOPLIST_FILE = "SMToolsSampleApp/SMToolsSampleApp-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SMToolsSampleApp/library\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		67E79C441566DD6C0080A441 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SMToolsSampleApp/SMToolsSampleApp-Prefix.pch";
+				INFOPLIST_FILE = "SMToolsSampleApp/SMToolsSampleApp-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SMToolsSampleApp/library\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		67E79C461566DD6C0080A441 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SMToolsSampleApp.app/SMToolsSampleApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SMToolsSampleApp/SMToolsSampleApp-Prefix.pch";
+				INFOPLIST_FILE = "SMToolsSampleAppTests/SMToolsSampleAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		67E79C471566DD6C0080A441 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SMToolsSampleApp.app/SMToolsSampleApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SMToolsSampleApp/SMToolsSampleApp-Prefix.pch";
+				INFOPLIST_FILE = "SMToolsSampleAppTests/SMToolsSampleAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		67E79C061566DD6B0080A441 /* Build configuration list for PBXProject "SMToolsSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67E79C401566DD6C0080A441 /* Debug */,
+				67E79C411566DD6C0080A441 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67E79C421566DD6C0080A441 /* Build configuration list for PBXNativeTarget "SMToolsSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67E79C431566DD6C0080A441 /* Debug */,
+				67E79C441566DD6C0080A441 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67E79C451566DD6C0080A441 /* Build configuration list for PBXNativeTarget "SMToolsSampleAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67E79C461566DD6C0080A441 /* Debug */,
+				67E79C471566DD6C0080A441 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 67E79C031566DD6B0080A441 /* Project object */;
+}
