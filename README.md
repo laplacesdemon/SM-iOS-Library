@@ -1,5 +1,8 @@
-SMTools
-=======
+SMTools - an iOS Library
+========================
+
+Overview
+--------
 
 Set of useful objects for iOS applications. This is a static library that is designed to use as a dependent project.
 
