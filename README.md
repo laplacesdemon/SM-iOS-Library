@@ -7,9 +7,6 @@ Set of useful objects for iOS applications. This is a static library that is des
 Features
 --------
 
-Features
---------
-
 * Asynchronous image view
 * Convenient C functions for displaying iOS alerts
 * NSConnection wrapper (with caching support)
