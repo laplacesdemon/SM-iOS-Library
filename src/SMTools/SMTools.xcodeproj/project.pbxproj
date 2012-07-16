@@ -54,12 +54,7 @@
 		67EF084A1566EF02001DA965 /* SMConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EF08441566EF02001DA965 /* SMConnection.m */; };
 		67EF084B1566EF02001DA965 /* SMSocketConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = 67EF08451566EF02001DA965 /* SMSocketConnector.h */; };
 		67EF084C1566EF02001DA965 /* SMSocketConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EF08461566EF02001DA965 /* SMSocketConnector.m */; };
-		67EF08541566EF2C001DA965 /* SMRestClientBasicAuthenticationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EF084F1566EF2C001DA965 /* SMRestClientBasicAuthenticationTest.m */; };
 		67EF08551566EF2C001DA965 /* SMRestClientIntegrationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EF08511566EF2C001DA965 /* SMRestClientIntegrationTest.m */; };
-		67EF08561566EF2C001DA965 /* SMRestClientPostTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EF08531566EF2C001DA965 /* SMRestClientPostTest.m */; };
-		67EF085E1566EF4D001DA965 /* SMCacheConnectionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EF08591566EF4D001DA965 /* SMCacheConnectionTest.m */; };
-		67EF085F1566EF4D001DA965 /* SMConnectionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EF085B1566EF4D001DA965 /* SMConnectionTest.m */; };
-		67EF08601566EF4D001DA965 /* SMSocketConnectionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EF085D1566EF4D001DA965 /* SMSocketConnectionTest.m */; };
 		67F023A81566D86F00B14C9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F023A71566D86F00B14C9F /* Foundation.framework */; };
 		67F023B61566D86F00B14C9F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F023B51566D86F00B14C9F /* SenTestingKit.framework */; };
 		67F023B81566D86F00B14C9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F023B71566D86F00B14C9F /* UIKit.framework */; };
@@ -546,12 +541,7 @@
 				67F023D41566D9CE00B14C9F /* SMMathFunctionsTests.m in Sources */,
 				67EF08121566EDAE001DA965 /* SMDeviceTest.m in Sources */,
 				67EF08131566EDAE001DA965 /* SMKeyChainTest.m in Sources */,
-				67EF08541566EF2C001DA965 /* SMRestClientBasicAuthenticationTest.m in Sources */,
 				67EF08551566EF2C001DA965 /* SMRestClientIntegrationTest.m in Sources */,
-				67EF08561566EF2C001DA965 /* SMRestClientPostTest.m in Sources */,
-				67EF085E1566EF4D001DA965 /* SMCacheConnectionTest.m in Sources */,
-				67EF085F1566EF4D001DA965 /* SMConnectionTest.m in Sources */,
-				67EF08601566EF4D001DA965 /* SMSocketConnectionTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

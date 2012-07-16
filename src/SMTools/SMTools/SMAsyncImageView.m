@@ -23,6 +23,9 @@
 
 #import "SMAsyncImageView.h"
 
+//NSString * const ERROR_STR_CONNECTION = @"Error, Tap to reload";
+//NSString * const ERROR_STR_NOT_FOUND = @"Not Found";
+
 @interface SMAsyncImageView (PrivateMethods)
 - (void)removeSubViews;
 - (void)insertErrorMessage:(NSString*)message;
@@ -30,19 +33,17 @@
 @end
 
 @implementation SMAsyncImageView
-@synthesize connectionErrorMessage;
-@synthesize notFoundErrorMessage;
-@synthesize indicatorView;
+@synthesize errorMessageNotFound = _errorMessageNotFound;
+@synthesize errorMessageConnection = _errorMessageConnection;
+@synthesize indicatorView = _indicatorView;
 
 #pragma mark - class methods
-
-- (id)init {
-    return [self initWithConnectionErrorMessage:@"Error, Tap to reload" notFoundMessage:@"Not Found"];
-}
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        [self setErrorMessageConnection:ERROR_STR_CONNECTION];
+        [self setErrorMessageNotFound:ERROR_STR_NOT_FOUND];
         [self prepareUI];
     }
     return self;
@@ -51,9 +52,20 @@
 - (id)initWithConnectionErrorMessage:(NSString*)theConnectionMessage notFoundMessage:(NSString*)theNotFoundMessage {
     self = [super init];
     if (self) {
-        connectionErrorMessage = theConnectionMessage;
-        notFoundErrorMessage = theNotFoundMessage;
-        
+        [self setErrorMessageConnection:theConnectionMessage];
+        [self setErrorMessageNotFound:theNotFoundMessage];
+        [self prepareUI];
+    }
+    return self;
+}
+
+// init from interface builder
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self setErrorMessageConnection:ERROR_STR_CONNECTION];
+        [self setErrorMessageNotFound:ERROR_STR_NOT_FOUND];
         [self prepareUI];
     }
     return self;
@@ -67,6 +79,8 @@
     [self removeSubViews];
     
     [_connection execute];
+    
+    [self sendActionsForControlEvents:UIControlEventEditingDidBegin];
 }
 
 - (void)reset {
@@ -83,8 +97,8 @@
 
 - (void)dealloc {
     [_url release];
-    [connectionErrorMessage release];
-    [notFoundErrorMessage release];
+    [_errorMessageConnection release];
+    [_errorMessageNotFound release];
     [_indicatorView release];
     [super dealloc];
 }
@@ -115,19 +129,19 @@
 
 - (void)prepareUI {
     CGRect rect = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
-    _indicatorView = [[UIActivityIndicatorView alloc] initWithFrame:rect];
-    [_indicatorView setHidesWhenStopped:YES];
-    [_indicatorView stopAnimating];
-    [_indicatorView setTag:99];
-    [_indicatorView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
-    [_indicatorView setBackgroundColor:[UIColor whiteColor]];
+    self.indicatorView = [[UIActivityIndicatorView alloc] initWithFrame:rect];
+    [self.indicatorView setHidesWhenStopped:YES];
+    [self.indicatorView stopAnimating];
+    [self.indicatorView setTag:99];
+    [self.indicatorView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
+    [self.indicatorView setBackgroundColor:[UIColor whiteColor]];
 }
 
 #pragma mark - connection delegate
 
 - (void) connectionDidStart:(SMConnection*)connection {
-    [_indicatorView startAnimating];
-    [self addSubview:_indicatorView];
+    [self.indicatorView startAnimating];
+    [self addSubview:self.indicatorView];
 }
 
 - (void) connectionDidFinish:(SMConnection*)connection {
@@ -139,7 +153,7 @@
     // get the image from data, if the image is nil then the data is not an image
     UIImage* img = [UIImage imageWithData:connection.receivedData];
     if (img == nil) {
-        [self insertErrorMessage:notFoundErrorMessage];
+        [self insertErrorMessage:self.errorMessageNotFound];
         return;
     }
     
@@ -177,6 +191,9 @@
     [self addSubview:imageView];
     [imageView release];
     [_connection release];
+    
+    [self sendActionsForControlEvents:UIControlEventValueChanged];
+    [self sendActionsForControlEvents:UIControlEventEditingDidEnd];
 }
 
 - (void) connectionDidFail:(SMConnection*)connection {
@@ -185,9 +202,11 @@
         [[[self subviews] objectAtIndex:0] removeFromSuperview];
     }
     
-    [self insertErrorMessage:connectionErrorMessage];
+    [self insertErrorMessage:self.errorMessageConnection];
     
     [_connection release];
+    
+    [self sendActionsForControlEvents:UIControlEventEditingDidEnd];
 }
 
 - (void) onLoadAgain {

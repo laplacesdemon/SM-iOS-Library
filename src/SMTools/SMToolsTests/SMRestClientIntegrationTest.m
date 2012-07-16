@@ -71,7 +71,7 @@
 
 - (void)testError {
     SMRestClient* client = [SMRestClient restClientWithMethodName:@"unknown" andIdParam:nil andParams:nil andHttpMethod:@"GET"];
-    [client setUrl:@"http://theUrlThatDoesNotExists.com"];
+    [client setUrl:@"http://theUrlThatDoesNotExists.com/"];
     [client setDelegate:self];
     [client execute];
     
@@ -96,7 +96,9 @@
 // called when an error occurred
 - (void)client:(SMRestClient *)client didFailWithError:(NSError *)error {
     if ([client.methodName isEqualToString:@"unknown"]) {
-        STAssertTrue([error code] == SMREST_ERROR_NOTFOUND, @"error code should be 404");
+        NSLog(@"userinfo: %@", [error userInfo]);
+        NSLog(@"desc: %@", [error localizedDescription]);
+        STAssertTrue([[error localizedDescription] isEqualToString:@"A server with the specified hostname could not be found."], @"error description is incorrect");
     } else {
         NSString* str = [NSString stringWithFormat:@"request should not give any errors: %@", client.methodName];
         STFail(str);

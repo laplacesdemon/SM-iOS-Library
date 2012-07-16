@@ -340,11 +340,11 @@ tag=_tag;
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     [_connection release];
     [_receivedData release];
-       
+    _isLoading = NO;
+    
     if ([_delegate respondsToSelector:@selector(client:didFailWithError:)]) {
         [_delegate client:self didFailWithError:error];        
     }
-
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {

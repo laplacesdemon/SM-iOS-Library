@@ -33,7 +33,7 @@
     // get the image from data, if the image is nil then the data is not an image
     UIImage* img = [UIImage imageWithData:connection.receivedData];
     if (img == nil) {
-        [self _insertErrorMessage:notFoundErrorMessage];
+        [self _insertErrorMessage:self.errorMessageNotFound];
         return;
     }
     
