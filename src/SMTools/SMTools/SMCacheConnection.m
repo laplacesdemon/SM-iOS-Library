@@ -65,7 +65,7 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     self.cacheDirectoryPath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"SMCache"];
     
-    NSLog(@"cache path: %@", self.cacheDirectoryPath);
+    //NSLog(@"cache path: %@", self.cacheDirectoryPath);
     
 	// check if the cache directory exists
 	if ([[NSFileManager defaultManager] fileExistsAtPath:self.cacheDirectoryPath]) {
@@ -127,7 +127,7 @@
 		// return the cached file
         self.loading = YES;
         [self.delegate connectionDidStart:self];
-        NSLog(@"file path: %@", self.filePath);
+        //NSLog(@"file path: %@", self.filePath);
         self.receivedData = [NSMutableData dataWithContentsOfFile:self.filePath];
         self.loading = NO;
         [self.delegate connectionDidFinish:self];

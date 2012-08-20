@@ -31,7 +31,7 @@
 @property (nonatomic, copy) NSString *textRelease;
 @property (nonatomic, copy) NSString *textLoading;
 
-@property (nonatomic, retain) UITableView* tableView;
+@property (nonatomic, retain) IBOutlet UITableView* tableView;
 
 - (void)setupStrings;
 - (void)addPullToRefreshHeader;

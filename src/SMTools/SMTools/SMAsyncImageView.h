@@ -23,11 +23,8 @@
 #import <UIKit/UIKit.h>
 #import "SMCacheConnection.h"
 
-//extern NSString * const ERROR_STR_CONNECTION;
-//extern NSString * const ERROR_STR_NOT_FOUND;
-#define ERROR_STR_CONNECTION @"Error, Tap to reload"
-#define ERROR_STR_NOT_FOUND @"Not Found"
-
+//#define ERROR_STR_CONNECTION @"Error, Tap to reload"
+//#define ERROR_STR_NOT_FOUND @"Not Found"
 
 @interface SMAsyncImageView : UIControl <SMConnectionDelegate> {
     SMCacheConnection* _connection;
@@ -37,6 +34,8 @@
 @property (nonatomic, retain) NSString* errorMessageConnection;
 @property (nonatomic, retain) NSString* errorMessageNotFound;
 @property (nonatomic, retain) UIActivityIndicatorView* indicatorView;
+@property (nonatomic) BOOL disableResizing;
+@property (nonatomic) BOOL resizeWidthBased;
 
 - (id)initWithConnectionErrorMessage:(NSString*)theConnectionMessage notFoundMessage:(NSString*)theNotFoundMessage;
 - (void) loadImageFromUrl:(NSURL*)url;

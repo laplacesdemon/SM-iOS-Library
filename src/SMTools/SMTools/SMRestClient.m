@@ -138,7 +138,7 @@ tag=_tag;
                                data:[NSString stringWithFormat:
                                      @"Content-Disposition: form-data; filename=\"%@\"\r\n", key]];
                 [self _utfAppendBody:body
-                               data:[NSString stringWithString:@"Content-Type: image/png\r\n\r\n"]];
+                               data:@"Content-Type: image/png\r\n\r\n"];
                 [body appendData:imageData];
             } else {
                 NSAssert([dataParam isKindOfClass:[NSData class]],
@@ -147,7 +147,7 @@ tag=_tag;
                                data:[NSString stringWithFormat:
                                      @"Content-Disposition: form-data; filename=\"%@\"\r\n", key]];
                 [self _utfAppendBody:body
-                               data:[NSString stringWithString:@"Content-Type: content/unknown\r\n\r\n"]];
+                               data:@"Content-Type: content/unknown\r\n\r\n"];
                 [body appendData:(NSData*)dataParam];
             }
             [self _utfAppendBody:body data:endLine];
@@ -223,6 +223,8 @@ tag=_tag;
 }
 
 - (void)handleResponseData:(NSData *)data {
+    if (_delegate == nil) return;
+        
     [_delegate client:self didLoadRawResponse:data];
     
     NSError* error = nil;
@@ -325,7 +327,7 @@ tag=_tag;
         return;
     }
     
-    if ([_delegate respondsToSelector:@selector(client:didReceiveResponse:)]) {
+    if (_delegate != nil && [_delegate respondsToSelector:@selector(client:didReceiveResponse:)]) {
         [_delegate client:self didReceiveResponse:response];
     }
 }
@@ -342,7 +344,7 @@ tag=_tag;
     [_receivedData release];
     _isLoading = NO;
     
-    if ([_delegate respondsToSelector:@selector(client:didFailWithError:)]) {
+    if (_delegate != nil && [_delegate respondsToSelector:@selector(client:didFailWithError:)]) {
         [_delegate client:self didFailWithError:error];        
     }
 }
@@ -397,7 +399,7 @@ tag=_tag;
     } else {
         [[challenge sender] cancelAuthenticationChallenge:challenge];
         NSError* error = [NSError errorWithDomain:@"SMUtilities" code:500 userInfo:nil];
-        if ([[self delegate] respondsToSelector:@selector(client:didFailWithError:)]) {
+        if (_delegate != nil && [[self delegate] respondsToSelector:@selector(client:didFailWithError:)]) {
             [[self delegate] client:self didFailWithError:error];            
         }
     }

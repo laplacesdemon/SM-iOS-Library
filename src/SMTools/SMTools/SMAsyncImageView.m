@@ -23,27 +23,34 @@
 
 #import "SMAsyncImageView.h"
 
-//NSString * const ERROR_STR_CONNECTION = @"Error, Tap to reload";
-//NSString * const ERROR_STR_NOT_FOUND = @"Not Found";
+// private static constants
+static NSString * const kErrorConnection = @"Error, Tap to reload";
+static NSString * const kErrorNotFound = @"Not Found";
 
 @interface SMAsyncImageView (PrivateMethods)
+
 - (void)removeSubViews;
 - (void)insertErrorMessage:(NSString*)message;
 - (void)prepareUI;
+
 @end
 
 @implementation SMAsyncImageView
+
+
 @synthesize errorMessageNotFound = _errorMessageNotFound;
 @synthesize errorMessageConnection = _errorMessageConnection;
 @synthesize indicatorView = _indicatorView;
+@synthesize disableResizing = _disableResizing;
+@synthesize resizeWidthBased = _resizeWidthBased;
 
 #pragma mark - class methods
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        [self setErrorMessageConnection:ERROR_STR_CONNECTION];
-        [self setErrorMessageNotFound:ERROR_STR_NOT_FOUND];
+        [self setErrorMessageConnection:kErrorConnection];
+        [self setErrorMessageNotFound:kErrorNotFound];
         [self prepareUI];
     }
     return self;
@@ -64,8 +71,8 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        [self setErrorMessageConnection:ERROR_STR_CONNECTION];
-        [self setErrorMessageNotFound:ERROR_STR_NOT_FOUND];
+        [self setErrorMessageConnection:kErrorConnection];
+        [self setErrorMessageNotFound:kErrorNotFound];
         [self prepareUI];
     }
     return self;
@@ -117,7 +124,7 @@
     UIButton* _errorButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
     //[_errorButton setCenter:self.center];
     [_errorButton setTitle:message forState:UIControlStateNormal];
-    [_errorButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [_errorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_errorButton setBackgroundColor:[UIColor clearColor]];
     [[_errorButton titleLabel] setAdjustsFontSizeToFitWidth:YES];
     [[_errorButton titleLabel] setFont:[UIFont fontWithName:@"Arial" size:12]];
@@ -133,8 +140,10 @@
     [self.indicatorView setHidesWhenStopped:YES];
     [self.indicatorView stopAnimating];
     [self.indicatorView setTag:99];
-    [self.indicatorView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
-    [self.indicatorView setBackgroundColor:[UIColor whiteColor]];
+    [self.indicatorView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhite];
+    [self.indicatorView setBackgroundColor:[UIColor clearColor]];
+    self.disableResizing = NO;
+    self.resizeWidthBased = YES;
 }
 
 #pragma mark - connection delegate
@@ -159,9 +168,12 @@
     
     // Resize, crop the image to make sure it is square and renders
     // well on Retina display
+    
     float ratio;
     float delta;
-    float px = 40; // Double the pixels of the UIImageView (to render on Retina)
+    // Double the pixels of the UIImageView (to render on Retina)
+    // resize based on width
+    float px = (self.resizeWidthBased) ? self.frame.size.width : self.frame.size.height; 
     CGPoint offset;
     CGSize size = img.size;
     if (size.width > size.height) {
@@ -173,9 +185,19 @@
         delta = (ratio*size.height - ratio*size.width);
         offset = CGPointMake(0, delta/2);
     }
-    CGRect clipRect = CGRectMake(-offset.x, -offset.y,
-                                 (ratio * size.width) + delta,
-                                 (ratio * size.height) + delta);
+    
+    CGRect clipRect;
+    if (self.disableResizing) {
+        // if you disable resizing, make sure that the image fit on the frame
+        clipRect = CGRectMake(-offset.x, -offset.y,
+                              size.width,
+                              size.height);
+    } else {
+        clipRect = CGRectMake(-offset.x, -offset.y,
+                              (ratio * size.width) + delta,
+                              (ratio * size.height) + delta);
+    }
+    
     UIGraphicsBeginImageContext(CGSizeMake(px, px));
     UIRectClip(clipRect);
     [img drawInRect:clipRect];
