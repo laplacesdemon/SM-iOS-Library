@@ -1,6 +1,11 @@
 SMTools - an iOS Library
 ========================
 
+Important Update
+----------------
+
+Usage of this library is discouraged. I have changed my set of tools to different libraries, and I only maintain this library to support current apps on the store.
+
 Overview
 --------
 
