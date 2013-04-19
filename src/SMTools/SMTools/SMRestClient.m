@@ -167,8 +167,10 @@ tag=_tag;
     NSString* responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     SBJSON *jsonParser = [[SBJSON new] autorelease];
     if ([responseString isEqualToString:@"true"]) {
+        [responseString release];
         return [NSDictionary dictionaryWithObject:@"true" forKey:@"result"];
     } else if ([responseString isEqualToString:@"false"]) {
+        [responseString release];
         if (error != nil) {
             *error = [self formError:SMREST_ERROR_INTERNAL
                             userInfo:[NSDictionary

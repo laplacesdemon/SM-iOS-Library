@@ -97,7 +97,8 @@
     // Show the header
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.3];
-    self.tableView.contentInset = UIEdgeInsetsMake(REFRESH_HEADER_HEIGHT, 0, 0, 0);
+    //self.tableView.contentInset = UIEdgeInsetsMake(REFRESH_HEADER_HEIGHT, 0, 0, 0);
+    [self.tableView setContentOffset:CGPointMake(0.0f, -REFRESH_HEADER_HEIGHT)];
     refreshLabel.text = self.textLoading;
     refreshArrow.hidden = YES;
     [refreshSpinner startAnimating];

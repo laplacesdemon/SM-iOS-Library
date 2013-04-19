@@ -76,6 +76,7 @@
     }
 	NSData *data = [[NSData alloc] initWithData:[xml dataUsingEncoding:NSASCIIStringEncoding]];
 	[outputStream write:[data bytes] maxLength:[data length]];
+    [data release];
 }
 
 #pragma mark - delegate
@@ -100,9 +101,10 @@
                         NSString *output = [[NSString alloc] initWithBytes:buffer length:len encoding:NSASCIIStringEncoding];
                         
                         if (nil != output) {
-                            NSLog(@"server said: %@", output);
+                            //NSLog(@"server said: %@", output);
                             [self.delegate connector:self didReceiveResponse:output];
                         }
+                        [output release];
                     }
                 }
             }

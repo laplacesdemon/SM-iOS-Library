@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
-@interface SMPullRefreshViewController : UIViewController 
+@interface SMPullRefreshViewController : GAITrackedViewController
 {
     UIView *refreshHeaderView;
     UILabel *refreshLabel;

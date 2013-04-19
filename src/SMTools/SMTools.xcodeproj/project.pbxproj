@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67CB5DDE1721340100A8AAE2 /* GAI.h in Headers */ = {isa = PBXBuildFile; fileRef = 67CB5DD71721340100A8AAE2 /* GAI.h */; };
+		67CB5DDF1721340100A8AAE2 /* GAITrackedViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 67CB5DD81721340100A8AAE2 /* GAITrackedViewController.h */; };
+		67CB5DE01721340100A8AAE2 /* GAITracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 67CB5DD91721340100A8AAE2 /* GAITracker.h */; };
+		67CB5DE11721340100A8AAE2 /* GAITransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 67CB5DDA1721340100A8AAE2 /* GAITransaction.h */; };
+		67CB5DE21721340100A8AAE2 /* GAITransactionItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 67CB5DDB1721340100A8AAE2 /* GAITransactionItem.h */; };
+		67CB5DE31721340100A8AAE2 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67CB5DDC1721340100A8AAE2 /* libGoogleAnalytics.a */; };
 		67EF07F61566ECF4001DA965 /* JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 67EF07E91566ECF4001DA965 /* JSON.h */; };
 		67EF07F71566ECF4001DA965 /* NSObject+SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 67EF07EA1566ECF4001DA965 /* NSObject+SBJSON.h */; };
 		67EF07F81566ECF4001DA965 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EF07EB1566ECF4001DA965 /* NSObject+SBJSON.m */; };
@@ -78,6 +84,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		67CB5DD71721340100A8AAE2 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		67CB5DD81721340100A8AAE2 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		67CB5DD91721340100A8AAE2 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		67CB5DDA1721340100A8AAE2 /* GAITransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITransaction.h; sourceTree = "<group>"; };
+		67CB5DDB1721340100A8AAE2 /* GAITransactionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITransactionItem.h; sourceTree = "<group>"; };
+		67CB5DDC1721340100A8AAE2 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
+		67CB5DDD1721340100A8AAE2 /* libGoogleAnalytics_debug.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics_debug.a; sourceTree = "<group>"; };
 		67EF07E91566ECF4001DA965 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		67EF07EA1566ECF4001DA965 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
 		67EF07EB1566ECF4001DA965 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
@@ -162,6 +175,7 @@
 				67EF08171566EE07001DA965 /* QuartzCore.framework in Frameworks */,
 				67EF08151566EDFA001DA965 /* Security.framework in Frameworks */,
 				67F023A81566D86F00B14C9F /* Foundation.framework in Frameworks */,
+				67CB5DE31721340100A8AAE2 /* libGoogleAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +196,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		67CB5DD61721340100A8AAE2 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				67CB5DD71721340100A8AAE2 /* GAI.h */,
+				67CB5DD81721340100A8AAE2 /* GAITrackedViewController.h */,
+				67CB5DD91721340100A8AAE2 /* GAITracker.h */,
+				67CB5DDA1721340100A8AAE2 /* GAITransaction.h */,
+				67CB5DDB1721340100A8AAE2 /* GAITransactionItem.h */,
+				67CB5DDC1721340100A8AAE2 /* libGoogleAnalytics.a */,
+				67CB5DDD1721340100A8AAE2 /* libGoogleAnalytics_debug.a */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
 		67EF07E81566ECF4001DA965 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +379,7 @@
 		67F023AA1566D86F00B14C9F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				67CB5DD61721340100A8AAE2 /* Analytics */,
 				67EF07E81566ECF4001DA965 /* JSON */,
 				67F023AB1566D86F00B14C9F /* SMTools-Prefix.pch */,
 			);
@@ -409,6 +438,11 @@
 				67EF08471566EF02001DA965 /* SMCacheConnection.h in Headers */,
 				67EF08491566EF02001DA965 /* SMConnection.h in Headers */,
 				67EF084B1566EF02001DA965 /* SMSocketConnector.h in Headers */,
+				67CB5DDE1721340100A8AAE2 /* GAI.h in Headers */,
+				67CB5DDF1721340100A8AAE2 /* GAITrackedViewController.h in Headers */,
+				67CB5DE01721340100A8AAE2 /* GAITracker.h in Headers */,
+				67CB5DE11721340100A8AAE2 /* GAITransaction.h in Headers */,
+				67CB5DE21721340100A8AAE2 /* GAITransactionItem.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,7 +619,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -601,7 +635,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -610,9 +644,17 @@
 		67F023C91566D86F00B14C9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					armv6,
+					armv7,
+				);
 				DSTROOT = /tmp/SMTools.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SMTools/SMTools-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SMTools/Analytics\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -623,9 +665,17 @@
 		67F023CA1566D86F00B14C9F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					armv6,
+					armv7,
+				);
 				DSTROOT = /tmp/SMTools.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SMTools/SMTools-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SMTools/Analytics\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
